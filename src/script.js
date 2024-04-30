@@ -36,7 +36,7 @@ document.querySelector('button[type="submit"]')
       return showAndHideErrorMessage()
     }
     if (!emailField.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-      // return showAndHideErrorMessage()
+      return showAndHideErrorMessage()
     }
     firstNameField.value = ''
     lastNameField.value = ''
@@ -56,10 +56,10 @@ document.querySelector('button[type="submit"]')
   }, false)
 
 function showAndHideErrorMessage() {
-  // const errorMessage = document.querySelector('.error')
-  // errorMessage.style.display = 'block'
-  // scroll(0,0)
-  // hideMessageAfterTimeout(errorMessage)
+  const errorMessage = document.querySelector('.error')
+  errorMessage.style.display = 'block'
+  scroll(0,0)
+  hideMessageAfterTimeout(errorMessage)
   return
 }
 
